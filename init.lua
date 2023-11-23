@@ -1,0 +1,16 @@
+-- Neovim
+require("core.lazy")
+require("core.config")
+require("core.keymaps")
+-- Plugins
+require("plugins.autopairs")
+require("plugins.blankline")
+require("plugins.cmp")
+require("plugins.colorizer")
+require("plugins.gitsigns")
+require("plugins.glow")
+require("plugins.lsp")
+require("plugins.lualine")
+require("plugins.mason")
+require("plugins.nvimtree")
+require("plugins.treesitter")
