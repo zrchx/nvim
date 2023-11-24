@@ -55,7 +55,7 @@ o.listchars = {
 }
 -- Colors
 o.termguicolors = true
-vim.cmd.colorscheme('nymph')
+vim.cmd('colorscheme abyss')
 -- Disable some things
 for _, provider in ipairs { "node", "perl", "python3", "ruby" } do
     vim.g["loaded_" .. provider .. "_prokvider"] = 0

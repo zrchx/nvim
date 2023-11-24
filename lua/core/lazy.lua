@@ -30,16 +30,14 @@ require("lazy").setup({
   { "nvim-lualine/lualine.nvim" },
   -- Bufferline
   { "akinsho/bufferline.nvim" },
-  -- Markdown preview
-  { "ellisonleao/glow.nvim" },
   -- File explorer
   { "nvim-tree/nvim-tree.lua" },
   -- Colorizer
   { "norcalli/nvim-colorizer.lua" },
   -- Gitsigns
   { "lewis6991/gitsigns.nvim" },
-  -- Themes
-  { "myagko/nymph.nvim" },
+  -- Theme
+  { "zrchx/abyss" },
 },
 -- Config
 {
