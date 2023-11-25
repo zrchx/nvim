@@ -1,12 +1,7 @@
 require("ibl").setup({
   indent = { char = "|" },
   exclude = {
-    filetypes = {
-      "help", "terminal",
-      "lazy", "lspinfo",
-      "mason",
-    },
+    filetypes = { "help", "man", "lazy", "mason" },
     buftypes = { "terminal" },
   },
 })
-

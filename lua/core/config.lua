@@ -1,5 +1,6 @@
 local o = vim.opt
 -- Config
+o.virtualedit = "block"
 o.undofile = true
 o.showmode = false
 o.updatetime = 100
@@ -10,6 +11,8 @@ o.cmdheight = 0
 -- Numbers
 o.number = true
 o.cursorline = true
+o.relativenumber = false
+o.cursorlineopt = "number"
 -- Search
 o.ignorecase = true
 o.smartcase = true
@@ -24,7 +27,7 @@ o.expandtab = true
 o.smartindent = true
 o.shiftwidth = 2
 o.tabstop = 2
-o.softtabstop = 2
+o.softtabstop = 0
 -- Split
 o.splitright = true
 o.splitbelow = true

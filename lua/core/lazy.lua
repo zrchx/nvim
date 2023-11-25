@@ -24,16 +24,20 @@ require("lazy").setup({
   { "rafamadriz/friendly-snippets" },
   -- Treesitter
   { "nvim-treesitter/nvim-treesitter" },
-  -- Blankline
+  -- Indentline
   { "lukas-reineke/indent-blankline.nvim" },
-  -- Lualine & Winbar
+  -- Lualine
   { "nvim-lualine/lualine.nvim" },
   -- Bufferline
-  { "akinsho/bufferline.nvim" },
+  { "willothy/nvim-cokeline", dependencies = {"nvim-lua/plenary.nvim"} },
   -- File explorer
   { "nvim-tree/nvim-tree.lua" },
+  -- Terminal
+  { "akinsho/toggleterm.nvim" },
+  -- Dashbord
+  { "goolord/alpha-nvim" },
   -- Colorizer
-  { "norcalli/nvim-colorizer.lua" },
+  { "NvChad/nvim-colorizer.lua" },
   -- Gitsigns
   { "lewis6991/gitsigns.nvim" },
   -- Theme

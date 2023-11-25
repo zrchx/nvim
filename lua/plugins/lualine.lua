@@ -6,17 +6,23 @@ require('lualine').setup {
   globalstatus = true,
   inactive_sections = {},
   sections = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = {
-      { "mode" },
+    lualine_a = { { "mode" } },
+    lualine_b = {
       { "filename",
         fmt = function ()
           local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":.")
-          if filename == "NvimTree_1" then return "" end
+          if filename == "NvimTree_1" then return "[FILE EXPLORER]" end
+          if filename == "term" then
+            return "[TERMINAL]"
+          end
           return filename
         end,
       },
+      { "diagnostics", sources = { "nvim_lsp" }, colored = false,
+        symbols = { error = "X ", warn = "! ", hint = "? ", info = "I " }
+      },
+    },
+    lualine_c = {
       "%=",
       { function()
         local msg = ''
@@ -34,12 +40,8 @@ require('lualine').setup {
         return msg
       end
       },
-      { "diagnostics", sources = { "nvim_lsp" }, colored = false,
-        symbols = { error = "X ", warn = "! ", hint = "? ", info = "I " }
-      },
     },
     lualine_x = {
-      { "branch", icon = "" },
       { "diff", colored = false,
         source = function()
           local gitsigns = vim.b.gitsigns_status_dict
@@ -52,7 +54,7 @@ require('lualine').setup {
           end
         end
       },
-      { "searchcount" },
+      { "branch", icon = "" },
       { "location" },
     },
     lualine_y = {},
